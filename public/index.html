@@ -39,6 +39,7 @@
             padding: 0 !important;
         }
     </style>
+    <link rel="stylesheet" href="./zoom/zoom.css">
     <link rel='stylesheet' id='wp-block-library-css' href='./scripts/style.min.css' media='all' />
     <style id='classic-theme-styles-inline-css'>
         /*! This file is auto-generated */
@@ -545,7 +546,7 @@
                                 <div class="col-12 col-lg-6 order-lg-last">
                                     <div class="lifestyle-image">
                                         <div class="image-box animated customScale">
-                                            <img src="https://i.ibb.co/z6L5Hhk/pos-2.png"
+                                            <img class="zoomable-image" src="https://i.ibb.co/z6L5Hhk/pos-2.png"
                                                 alt="Lifestyle">
                                         </div>
                                     </div>
@@ -592,7 +593,7 @@
                                 <div class="col-12 col-lg-6">
                                     <div class="combine-image">
                                         <div class="image-box animated customScale">
-                                            <img src="https://i.ibb.co/nPMTzGq/promo-3.png"
+                                            <img class="zoomable-image" src="https://i.ibb.co/nPMTzGq/promo-3.png"
                                                 alt="Combine">
                                         </div>
                                     </div>
@@ -602,7 +603,7 @@
                                     <div class="combine-group text-center">
                                         <div class="combine-right-image d-none d-lg-block">
                                             <div class="image-box animated customScale">
-                                                <img src="https://i.ibb.co/5RNk64b/promo-31.png"
+                                                <img class="zoomable-image" src="https://i.ibb.co/5RNk64b/promo-31.png"
                                                     alt="Combine">
                                             </div>
                                         </div>
@@ -658,7 +659,7 @@
                                 <div class="about-right">
                                     <div class="about-right-image">
                                         <div class="image-box animated customScale">
-                                            <img class=""
+                                            <img class="zoomable-image"
                                                 src="https://i.ibb.co/X4yPjPb/general-5.png"
                                                 alt="Giới thiệu">
                                         </div>
@@ -730,7 +731,7 @@
                                     </div>
                                     <div class="about-left-image">
                                         <div class="image-box animated customScale">
-                                            <img class=""
+                                            <img class="zoomable-image"
                                                 src="https://i.ibb.co/nbNYxVP/general-51.png"
                                                 alt="Giới thiệu">
                                         </div>
@@ -759,7 +760,7 @@
                                     </div>
                                     <div class="about-left-image">
                                         <div class="image-box animated customScale">
-                                            <img class=""
+                                            <img class="zoomable-image"
                                                 src="https://i.ibb.co/MBxXhQ8/land-61.png"
                                                 alt="Giới thiệu">
                                         </div>
@@ -768,7 +769,7 @@
                                 <div class="about-right">
                                     <div class="about-right-image">
                                         <div class="image-box animated customScale">
-                                            <img class=""
+                                            <img class="zoomable-image"
                                                 src="https://i.ibb.co/dQsrzCq/land-6.png"
                                                 alt="Giới thiệu">
                                         </div>
@@ -796,7 +797,7 @@
                                     </div>
                                     <div class="about-left-image">
                                         <div class="image-box animated customScale">
-                                            <img class=""
+                                            <img class="zoomable-image"
                                                 src="https://i.ibb.co/8jWkFwr/show-7.png"
                                                 alt="Giới thiệu">
                                         </div>
@@ -806,7 +807,7 @@
                                 <div class="about-right">
                                     <div class="about-right-image">
                                         <div class="image-box animated customScale">
-                                            <img class=""
+                                            <img class="zoomable-image"
                                                 src="https://i.ibb.co/Dbdqh55/show-71.png"
                                                 alt="Giới thiệu">
                                         </div>
@@ -834,7 +835,7 @@
                                     </div>
                                     <div class="about-left-image">
                                         <div class="image-box animated customScale">
-                                            <img class=""
+                                            <img class="zoomable-image"
                                                 src="https://i.ibb.co/ZXV8XR2/house-8.png"
                                                 alt="Giới thiệu">
                                         </div>
@@ -844,7 +845,7 @@
                                 <div class="about-right">
                                     <div class="about-right-image">
                                         <div class="image-box animated customScale">
-                                            <img class=""
+                                            <img class="zoomable-image"
                                                 src="https://i.ibb.co/N1xhmG4/house-81.png"
                                                 alt="Giới thiệu">
                                         </div>
@@ -907,7 +908,7 @@
                                 <div class="about-right">
                                     <div class="about-right-image">
                                         <div class="image-box animated customScale">
-                                            <img class=""
+                                            <img class="zoomable-image"
                                                 src="https://i.ibb.co/NrDghGY/end-9.png"
                                                 alt="Giới thiệu">
                                         </div>
@@ -1006,8 +1007,21 @@
             </ul>
         </div>
     </div>
+
+    <div id="myModal" class="modal">
+        <!-- Zoom Controls -->
+        <div class="zoom-controls">
+            <button onclick="closeModal()">Đóng</button>
+            <button onclick="zoomIn()">Phóng to</button>
+            <button onclick="zoomOut()">Thu nhỏ</button>
+        </div>
+        <div class="modal-content-container">
+            <img id="modalImage" class="modal-content-zoom">
+        </div>
+    </div>
     
  
+    <script src="./zoom/zoom.js"></script>
     <script src="./scripts/hook.min.js"
         id="wp-hooks-js"></script>
     <script src="./scripts/i18n.min.js"

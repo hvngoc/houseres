@@ -1,0 +1,59 @@
+/* The Modal (background) */
+.modal {
+    position: absolute;
+    z-index: 10;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+/* Modal Content Container */
+.modal-content-container {
+    margin: auto;
+    overflow: auto;
+    position: absolute;
+}
+
+/* Modal Content (image) */
+.modal-content-zoom {
+    display: block;
+    width: 100%;
+    border-radius: 0;
+    transition: transform 0.2s ease-in-out;
+    cursor: grab;
+}
+
+.modal-content img{
+    border-radius: 0;
+}
+
+.modal-content:active {
+    cursor: grabbing;
+}
+
+/* Zoom Control Buttons */
+.zoom-controls {
+    position: absolute;
+    z-index: 11;
+    margin: 0 auto;
+}
+
+.zoom-controls button {
+    background-color: rgb(51, 51, 51, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.zoom-controls button:hover {
+    background-color: #555;
+}
+
